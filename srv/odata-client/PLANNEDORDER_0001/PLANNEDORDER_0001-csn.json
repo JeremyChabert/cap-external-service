@@ -1,0 +1,600 @@
+{
+    "meta": {
+        "creator": "edmx2csn 1.0.41"
+    },
+    "$version": "0.2",
+    "definitions": {
+        "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.PlannedOrderCapacity": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "PlannedOrder": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "CapacityRequirement": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 12
+                },
+                "CapacityRequirementItem": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 8
+                },
+                "CapacityRqmtItemCapacity": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "PlannedOrderType": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "Sequence": {
+                    "type": "cds.String",
+                    "length": 6
+                },
+                "Operation": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SubOperation": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "WorkCenter": {
+                    "type": "cds.String",
+                    "length": 8
+                },
+                "CapacityCategoryCode": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "Capacity": {
+                    "type": "cds.String",
+                    "length": 8
+                },
+                "MRPController": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "MRPPlant": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "OperationLatestStartDate": {
+                    "type": "cds.Date"
+                },
+                "OperationLatestStartTime": {
+                    "type": "cds.Time"
+                },
+                "OperationLatestEndDate": {
+                    "type": "cds.Date"
+                },
+                "OperationLatestEndTime": {
+                    "type": "cds.Time"
+                },
+                "OperationEarliestStartDate": {
+                    "type": "cds.Date"
+                },
+                "OperationEarliestStartTime": {
+                    "type": "cds.Time"
+                },
+                "OperationEarliestEndDate": {
+                    "type": "cds.Date"
+                },
+                "OperationEarliestEndTime": {
+                    "type": "cds.Time"
+                },
+                "OpLtstSchedldProcgStrtDte": {
+                    "type": "cds.Date"
+                },
+                "OpLtstSchedldProcgStrtTme": {
+                    "type": "cds.Time"
+                },
+                "OpLtstSchedldTrdwnStrtDte": {
+                    "type": "cds.Date"
+                },
+                "OpLtstSchedldTrdwnStrtTme": {
+                    "type": "cds.Time"
+                },
+                "ScheduledBasicEndTime": {
+                    "type": "cds.Time"
+                },
+                "ScheduledBasicStartTime": {
+                    "type": "cds.Time"
+                },
+                "CapacityRequirementUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "UnitOfMeasureISOCode": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "ScheduledCapReqOpSegSetupDurn": {
+                    "type": "cds.Double"
+                },
+                "RemainingCapReqOpSegSetupDurn": {
+                    "type": "cds.Double"
+                },
+                "ScheduledCapReqOpSegProcgDurn": {
+                    "type": "cds.Double"
+                },
+                "RemainingCapReqOpSegProcgDurn": {
+                    "type": "cds.Double"
+                },
+                "ScheduledCapReqOpSegTrdwnDurn": {
+                    "type": "cds.Double"
+                },
+                "RemainingCapReqOpSegTrdwnDurn": {
+                    "type": "cds.Double"
+                },
+                "WrkCtrHasLeadingCapacity": {
+                    "type": "cds.Boolean"
+                },
+                "OperationText": {
+                    "type": "cds.String",
+                    "length": 40
+                },
+                "PlannedOrderLastChangeDateTime": {
+                    "type": "cds.Timestamp"
+                },
+                "SAP__Messages": {
+                    "type": "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.SAP__Message"
+                },
+                "_PlannedOrder": {
+                    "type": "cds.Association",
+                    "target": "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.PlannedOrderHeader",
+                    "cardinality": {
+                        "max": 1
+                    }
+                }
+            }
+        },
+        "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.PlannedOrderComponent": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "PlannedOrder": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "Reservation": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "ReservationItem": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "BOMItem": {
+                    "type": "cds.String",
+                    "length": 8
+                },
+                "BOMItemDescription": {
+                    "type": "cds.String",
+                    "length": 40
+                },
+                "BillOfMaterialCategory": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "BOMItemSorter": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "BillOfMaterialItemNumber": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "BillOfMaterialInternalID": {
+                    "type": "cds.String",
+                    "length": 8
+                },
+                "BillOfMaterialVariant": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "BOMItemCategory": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "Material": {
+                    "type": "cds.String",
+                    "length": 18
+                },
+                "MatlCompRequirementDate": {
+                    "type": "cds.Date"
+                },
+                "GoodsMovementEntryQty": {
+                    "type": "cds.Decimal",
+                    "precision": 13,
+                    "scale": 3
+                },
+                "EntryUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "RequiredQuantity": {
+                    "type": "cds.Decimal",
+                    "precision": 13,
+                    "scale": 3
+                },
+                "BaseUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "WithdrawnQuantity": {
+                    "type": "cds.Decimal",
+                    "precision": 13,
+                    "scale": 3
+                },
+                "DebitCreditCode": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "ComponentScrapInPercent": {
+                    "type": "cds.Decimal",
+                    "precision": 5,
+                    "scale": 2
+                },
+                "QuantityIsFixed": {
+                    "type": "cds.Boolean"
+                },
+                "MaterialComponentIsPhantomItem": {
+                    "type": "cds.Boolean"
+                },
+                "Plant": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "StorageLocation": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SupplyArea": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "MRPController": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "OrderPathValue": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "OrderLevelValue": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "Assembly": {
+                    "type": "cds.String",
+                    "length": 18
+                },
+                "AssemblyOrderPathValue": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "AssemblyOrderLevelValue": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "DiscontinuationGroup": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "MatlCompDiscontinuationType": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "MatlCompIsFollowUpMaterial": {
+                    "type": "cds.Boolean"
+                },
+                "FollowUpGroup": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "FollowUpMaterial": {
+                    "type": "cds.String",
+                    "length": 18
+                },
+                "FollowUpMaterialIsNotActive": {
+                    "type": "cds.Boolean"
+                },
+                "PlannedOrderLastChangeDateTime": {
+                    "type": "cds.Timestamp"
+                },
+                "_PlannedOrder": {
+                    "type": "cds.Association",
+                    "target": "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.PlannedOrderHeader",
+                    "cardinality": {
+                        "max": 1
+                    }
+                }
+            }
+        },
+        "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.PlannedOrderHeader": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "PlannedOrder": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "PlannedOrderType": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "PlannedOrderProfile": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "Material": {
+                    "type": "cds.String",
+                    "length": 18
+                },
+                "MaterialName": {
+                    "type": "cds.String",
+                    "length": 40
+                },
+                "ProductionPlant": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "MRPPlant": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "MRPArea": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "ProductionVersion": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "MaterialProcurementCategory": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "MaterialProcurementType": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "StorageLocation": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "BaseUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "TotalQuantity": {
+                    "type": "cds.Decimal",
+                    "precision": 13,
+                    "scale": 3
+                },
+                "PlndOrderPlannedScrapQty": {
+                    "type": "cds.Decimal",
+                    "precision": 13,
+                    "scale": 3
+                },
+                "GoodsReceiptQty": {
+                    "type": "cds.Decimal",
+                    "precision": 13,
+                    "scale": 3
+                },
+                "IssuedQuantity": {
+                    "type": "cds.Decimal",
+                    "precision": 13,
+                    "scale": 3
+                },
+                "PlndOrderPlannedStartDate": {
+                    "type": "cds.Date"
+                },
+                "PlndOrderPlannedStartTime": {
+                    "type": "cds.Time"
+                },
+                "PlndOrderPlannedEndDate": {
+                    "type": "cds.Date"
+                },
+                "PlndOrderPlannedEndTime": {
+                    "type": "cds.Time"
+                },
+                "PlannedOrderOpeningDate": {
+                    "type": "cds.Date"
+                },
+                "PlannedOrderLastChangeDateTime": {
+                    "type": "cds.Timestamp"
+                },
+                "ProductionStartDate": {
+                    "type": "cds.Date"
+                },
+                "ProductionEndDate": {
+                    "type": "cds.Date"
+                },
+                "SalesOrder": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "SalesOrderItem": {
+                    "type": "cds.String",
+                    "length": 6
+                },
+                "Customer": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "WBSElementInternalID": {
+                    "type": "cds.String",
+                    "length": 8
+                },
+                "WBSElementExternalID": {
+                    "type": "cds.String",
+                    "length": 24
+                },
+                "WBSDescription": {
+                    "type": "cds.String",
+                    "length": 40
+                },
+                "AccountAssignmentCategory": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "Reservation": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "PlannedOrderLongText": {
+                    "type": "cds.String",
+                    "length": 255
+                },
+                "MRPController": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "ProductionSupervisor": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "PurchasingGroup": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "PurchasingOrganization": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "FixedSupplier": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "PurchasingDocument": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "PurchasingDocumentItem": {
+                    "type": "cds.String",
+                    "length": 5
+                },
+                "QuotaArrangement": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "QuotaArrangementItem": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "SupplierName": {
+                    "type": "cds.String",
+                    "length": 80
+                },
+                "PlannedOrderIsFirm": {
+                    "type": "cds.Boolean"
+                },
+                "PlannedOrderIsConvertible": {
+                    "type": "cds.Boolean"
+                },
+                "PlannedOrderBOMIsFixed": {
+                    "type": "cds.Boolean"
+                },
+                "PlannedOrderCapacityIsDsptchd": {
+                    "type": "cds.Boolean"
+                },
+                "CapacityRequirement": {
+                    "type": "cds.String",
+                    "length": 12
+                },
+                "BillOfOperationsVariant": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "CapacityRequirementOrigin": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "BillOfOperationsType": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "BillOfOperationsGroup": {
+                    "type": "cds.String",
+                    "length": 8
+                },
+                "LastScheduledDate": {
+                    "type": "cds.Date"
+                },
+                "ScheduledBasicEndDate": {
+                    "type": "cds.Date"
+                },
+                "ScheduledBasicEndTime": {
+                    "type": "cds.Time"
+                },
+                "ScheduledBasicStartDate": {
+                    "type": "cds.Date"
+                },
+                "ScheduledBasicStartTime": {
+                    "type": "cds.Time"
+                },
+                "SchedulingType": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "SAP__Messages": {
+                    "type": "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.SAP__Message"
+                },
+                "_PlannedOrderCapacity": {
+                    "type": "cds.Association",
+                    "target": "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.PlannedOrderCapacity",
+                    "cardinality": {
+                        "max": "*"
+                    }
+                },
+                "_PlannedOrderComponent": {
+                    "type": "cds.Association",
+                    "target": "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.PlannedOrderComponent",
+                    "cardinality": {
+                        "max": "*"
+                    }
+                }
+            }
+        },
+        "com.sap.gateway.srvd_a2x.api_plannedorder.v0001.SAP__Message": {
+            "kind": "type",
+            "elements": {
+                "code": {
+                    "type": "cds.LargeString"
+                },
+                "message": {
+                    "type": "cds.LargeString"
+                },
+                "target": {
+                    "type": "cds.LargeString"
+                },
+                "additionalTargets": {
+                    "type": "cds.LargeString"
+                },
+                "transition": {
+                    "type": "cds.Boolean"
+                },
+                "numericSeverity": {
+                    "type": "cds.Integer"
+                },
+                "longtextUrl": {
+                    "type": "cds.LargeString"
+                }
+            }
+        },
+        "com.sap.gateway.srvd_a2x.api_plannedorder.v0001": {
+            "kind": "service"
+        }
+    }
+}
