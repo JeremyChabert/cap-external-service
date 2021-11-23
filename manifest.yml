@@ -1,17 +1,8 @@
-# Generated manifest.yml based on template version 0.1.0
-# appName = cap-s4
-# language=nodejs
-# multitenancy=false
----
 applications:
-# -----------------------------------------------------------------------------------
-# Backend Service
-# -----------------------------------------------------------------------------------
-- name: cap-s4-srv
-  random-route: true  # for development only
-  path: gen/srv
-  memory: 256M
-  buildpack: nodejs_buildpack
-  services:
-  - cap-s4-uaa
-
+  - name: cap-s4
+    path: deployment/
+    buildpacks:
+      - nodejs_buildpack
+    memory: 256M
+    command: cds watch
+    random-route: true
