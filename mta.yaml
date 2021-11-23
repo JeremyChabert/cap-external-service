@@ -1,0 +1,46 @@
+## Generated mta.yaml based on template version 0.4.0
+## appName = cap-s4
+## language=nodejs; multitenant=false
+## approuter=
+_schema-version: "3.1"
+ID: cap-s4
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm install --production
+        - npx -p @sap/cds-dk cds build --production
+
+modules:
+  # --------------------- SERVER MODULE ------------------------
+  - name: cap-s4-srv
+    # ------------------------------------------------------------
+    type: nodejs
+    path: gen/srv
+    provides:
+      - name: srv-api # required by consumers of CAP services (e.g. approuter)
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: cap-s4-uaa
+      - name: cap-s4-destination
+
+resources:
+  - name: cap-s4-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-name: cap-s4-destination
+      service: destination
+      service-plan: lite
+
+  - name: cap-s4-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: ./xs-security.json
+      service: xsuaa
+      service-plan: application

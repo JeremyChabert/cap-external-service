@@ -1,0 +1,88 @@
+{
+  "name": "cap-s4",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/core": "^1.52.0",
+    "@sap/cds": "^5",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.8.1",
+    "@sap/cloud-sdk-op-vdm-planned-order-service": "^1.28.2",
+    "@sap/cloud-sdk-vdm-planned-order-service": "^1.28.2",
+    "@sap/xsenv": "^3.1.1",
+    "@sap/xssec": "^3.2.10",
+    "axios": "^0.24.0",
+    "csurf": "^1.11.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "passport": "^0.5.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "cds run"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2020": true,
+      "node": true,
+      "jest": true,
+      "mocha": true
+    },
+    "globals": {
+      "SELECT": true,
+      "INSERT": true,
+      "UPDATE": true,
+      "DELETE": true,
+      "CREATE": true,
+      "DROP": true,
+      "CDL": true,
+      "CQL": true,
+      "CXL": true,
+      "cds": true
+    },
+    "rules": {
+      "no-console": "off",
+      "require-atomic-updates": "off"
+    }
+  },
+  "cds": {
+    "features": {
+      "fetch_csrf": "true"
+    },
+    "requires": {
+      "uaa": {
+        "kind": "xsuaa"
+      },
+      "OP_API_SETTLMT_DOC_0001.sap.gateway.srvd_a2x.api_settlmt_doc.v0001": {
+        "kind": "odata-v4",
+        "model": "srv/external/OP_API_SETTLMT_DOC_0001",
+        "credentials": {
+          "destination": "S4HANA",
+          "destinationPath": "/sap/opu/odata4/sap/api_settlmt_doc/srvd_a2x/sap/settlmtdoc/0001/",
+          "requestTimeout": 10000
+        }
+      },
+      "ZPDCDS_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZPDCDS_SRV",
+        "credentials": {
+          "destination": "sapes5",
+          "url": "/sap/opu/odata/sap/ZPDCDS_SRV/",
+          "requestTimeout": 10000
+        }
+      },
+      "Northwind": {
+        "kind": "odata",
+        "model": "srv/external/Northwind",
+        "credentials": {
+          "destination": "northwind",
+          "requestTimeout": 10000
+        }
+      }
+    }
+  }
+}
