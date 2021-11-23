@@ -1,0 +1,568 @@
+{
+    "meta": {
+        "creator": "edmx2csn 1.0.41"
+    },
+    "$version": "0.2",
+    "definitions": {
+        "com.sap.gateway.srvd_a2x.api_settlmt_doc.v0001.SetlDocItm": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "SettlmtDoc": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "SettlmtDocItem": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 6
+                },
+                "SettlmtDocCurrency": {
+                    "type": "cds.String",
+                    "length": 5
+                },
+                "Product": {
+                    "type": "cds.String",
+                    "length": 40
+                },
+                "ProductGroup": {
+                    "type": "cds.String",
+                    "length": 9
+                },
+                "Plant": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SupplierTaxCode": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "CustomerTaxCode": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "PricingDate": {
+                    "type": "cds.Date"
+                },
+                "SettlmtQuantity": {
+                    "type": "cds.Decimal",
+                    "precision": 13,
+                    "scale": 3
+                },
+                "SettlmtQuantityUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "SettlmtQuantityUnitISOCode": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "NetPriceAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 22,
+                    "scale": 11
+                },
+                "NetPriceQuantity": {
+                    "type": "cds.Decimal",
+                    "precision": 5,
+                    "scale": 0
+                },
+                "NetPriceQuantityUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "SettlmtToBaseQuantityNmrtr": {
+                    "type": "cds.Decimal",
+                    "precision": 5,
+                    "scale": 0
+                },
+                "SettlmtToBaseQuantityDnmntr": {
+                    "type": "cds.Decimal",
+                    "precision": 5,
+                    "scale": 0
+                },
+                "BaseUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "ItemNetWeight": {
+                    "type": "cds.Decimal",
+                    "precision": 15,
+                    "scale": 3
+                },
+                "ItemGrossWeight": {
+                    "type": "cds.Decimal",
+                    "precision": 15,
+                    "scale": 3
+                },
+                "ItemWeightUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "ItemWeightUnitISOCode": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "ItemVolume": {
+                    "type": "cds.Decimal",
+                    "precision": 15,
+                    "scale": 3
+                },
+                "ItemVolumeUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "ItemVolumeUnitISOCode": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "SupplierItemGrossAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 30,
+                    "scale": 15
+                },
+                "SupplierItemNetAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 30,
+                    "scale": 15
+                },
+                "SupplierItemTaxAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 26,
+                    "scale": 13
+                },
+                "CustomerItemGrossAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 30,
+                    "scale": 15
+                },
+                "CustomerItemNetAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 30,
+                    "scale": 15
+                },
+                "CustomerItemTaxAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 26,
+                    "scale": 13
+                },
+                "CashDiscountIsDeductible": {
+                    "type": "cds.Boolean"
+                },
+                "SettlmtSourceDoc": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "SettlmtSourceDocItem": {
+                    "type": "cds.String",
+                    "length": 6
+                },
+                "SettlmtSourceDocCat": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "SettlmtItemActivityReason": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "SettlmtDocItemText": {
+                    "type": "cds.String",
+                    "length": 40
+                },
+                "SupplierProductID": {
+                    "type": "cds.String",
+                    "length": 35
+                },
+                "TaxJurisdiction": {
+                    "type": "cds.String",
+                    "length": 15
+                },
+                "ProductPurchasePointsQtyUnit": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "ProdPurPointsQtyUnitISOCode": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "ProductPurchasePointsQty": {
+                    "type": "cds.Decimal",
+                    "precision": 13,
+                    "scale": 3
+                },
+                "SuplrSettlmtBusinessArea": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "CustSettlmtBusinessArea": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SuplrSettlmtCostCenter": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "SuplrSettlmtProfitCenter": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "IncotermsVersion": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "IncotermsLocation1": {
+                    "type": "cds.String",
+                    "length": 70
+                },
+                "IncotermsLocation2": {
+                    "type": "cds.String",
+                    "length": 70
+                },
+                "CustSettlmtCostCenter": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "CustSettlmtProfitCenter": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "SettlmtPrecdgDoc": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "SettlmtPrecdgDocItem": {
+                    "type": "cds.String",
+                    "length": 6
+                },
+                "SettlmtPrecdgDocCat": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "SettlmtDocItemCat": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "SupplierSettlementOrder": {
+                    "type": "cds.String",
+                    "length": 12
+                },
+                "ItemSettlmtRelevance": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "SettlementFiscalYear": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SettlmtRefDoc": {
+                    "type": "cds.String",
+                    "length": 20
+                },
+                "SettlmtRefDocCompanyCode": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SettlmtRefDocItem": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "SettlmtRefDocCat": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "SupplierSubrange": {
+                    "type": "cds.String",
+                    "length": 6
+                },
+                "IntercompanyTaxCountry": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "TaxCountry": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "PriorSupplier": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "_SettlmtDoc": {
+                    "type": "cds.Association",
+                    "target": "com.sap.gateway.srvd_a2x.api_settlmt_doc.v0001.SetlDoc",
+                    "cardinality": {
+                        "max": 1
+                    }
+                }
+            }
+        },
+        "com.sap.gateway.srvd_a2x.api_settlmt_doc.v0001.SetlDoc": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "SettlmtDoc": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "SettlmtDocType": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SettlmtProcessType": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "PostingDate": {
+                    "type": "cds.Date"
+                },
+                "InvoicingParty": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "PayeeParty": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "BillToParty": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "PayerParty": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "PurchasingOrganization": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "PurchasingGroup": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "SalesOrganization": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "DistributionChannel": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "Division": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "SuplrSettlmtCompanyCode": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "CustSettlmtCompanyCode": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "DocumentDate": {
+                    "type": "cds.Date"
+                },
+                "DocumentReferenceID": {
+                    "type": "cds.String",
+                    "length": 16
+                },
+                "AssignmentReference": {
+                    "type": "cds.String",
+                    "length": 18
+                },
+                "SettlmtDocCurrency": {
+                    "type": "cds.String",
+                    "length": 5
+                },
+                "SettlmtDocCurrencyISOCode": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "ExchangeRate": {
+                    "type": "cds.Decimal",
+                    "precision": 9,
+                    "scale": 5
+                },
+                "ExchangeRateIsFixed": {
+                    "type": "cds.Boolean"
+                },
+                "SupplierTotalGrossAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 30,
+                    "scale": 15
+                },
+                "SupplierTotalNetAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 30,
+                    "scale": 15
+                },
+                "SupplierTotalTaxAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 26,
+                    "scale": 13
+                },
+                "CustomerTotalGrossAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 30,
+                    "scale": 15
+                },
+                "CustomerTotalNetAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 30,
+                    "scale": 15
+                },
+                "CustomerTotalTaxAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 26,
+                    "scale": 13
+                },
+                "SupplierPaymentTerms": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SupplierCashDiscount1Days": {
+                    "type": "cds.Decimal",
+                    "precision": 3,
+                    "scale": 0
+                },
+                "SupplierCashDiscount2Days": {
+                    "type": "cds.Decimal",
+                    "precision": 3,
+                    "scale": 0
+                },
+                "SupplierNetPaymentDays": {
+                    "type": "cds.Decimal",
+                    "precision": 3,
+                    "scale": 0
+                },
+                "SupplierCashDiscount1Percent": {
+                    "type": "cds.Decimal",
+                    "precision": 5,
+                    "scale": 3
+                },
+                "SupplierCashDiscount2Percent": {
+                    "type": "cds.Decimal",
+                    "precision": 5,
+                    "scale": 3
+                },
+                "SupplierPaymentMethod": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "CustomerPaymentTerms": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "CustomerCashDiscount1Days": {
+                    "type": "cds.Decimal",
+                    "precision": 3,
+                    "scale": 0
+                },
+                "CustomerCashDiscount2Days": {
+                    "type": "cds.Decimal",
+                    "precision": 3,
+                    "scale": 0
+                },
+                "CustomerNetPaymentDays": {
+                    "type": "cds.Decimal",
+                    "precision": 3,
+                    "scale": 0
+                },
+                "CustomerCashDiscount1Percent": {
+                    "type": "cds.Decimal",
+                    "precision": 5,
+                    "scale": 3
+                },
+                "CustomerCashDiscount2Percent": {
+                    "type": "cds.Decimal",
+                    "precision": 5,
+                    "scale": 3
+                },
+                "CustomerPaymentMethod": {
+                    "type": "cds.String",
+                    "length": 1
+                },
+                "SuplrTotEligibleAmtForCshDisc": {
+                    "type": "cds.Decimal",
+                    "precision": 26,
+                    "scale": 13
+                },
+                "CustTotEligibleAmtForCshDisc": {
+                    "type": "cds.Decimal",
+                    "precision": 26,
+                    "scale": 13
+                },
+                "SettlmtDocIsCanceled": {
+                    "type": "cds.Boolean"
+                },
+                "CanceledSettlmtDoc": {
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "SettlmtDocActivityReason": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "PaymentReference": {
+                    "type": "cds.String",
+                    "length": 30
+                },
+                "SettlmtApplSts": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SalesOffice": {
+                    "type": "cds.String",
+                    "length": 4
+                },
+                "SalesGroup": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "SupplierSettlmtBlkgReason": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "CustomerSettlmtBlkgReason": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "TaxDepartureCountry": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "TaxDestinationCountry": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "IsEUTriangularDeal": {
+                    "type": "cds.Boolean"
+                },
+                "SupplierVATRegistration": {
+                    "type": "cds.String",
+                    "length": 20
+                },
+                "CustomerVATRegistration": {
+                    "type": "cds.String",
+                    "length": 20
+                },
+                "TotalGrossAmount": {
+                    "type": "cds.Decimal",
+                    "precision": 30,
+                    "scale": 15
+                },
+                "_SettlmtDocItem": {
+                    "type": "cds.Association",
+                    "target": "com.sap.gateway.srvd_a2x.api_settlmt_doc.v0001.SetlDocItm",
+                    "cardinality": {
+                        "max": "*"
+                    }
+                }
+            }
+        },
+        "com.sap.gateway.srvd_a2x.api_settlmt_doc.v0001": {
+            "kind": "service"
+        }
+    }
+}

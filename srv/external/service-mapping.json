@@ -1,0 +1,12 @@
+{
+  "OP_API_SETTLMT_DOC_0001": {
+    "directoryName": "OP_API_SETTLMT_DOC_0001",
+    "servicePath": "/odata/v4",
+    "npmPackageName": "OP_API_SETTLMT_DOC_0001"
+  },
+  "PLANNEDORDER_0001": {
+    "directoryName": "PLANNEDORDER_0001",
+    "servicePath": "/odata/v4",
+    "npmPackageName": "PLANNEDORDER_0001"
+  }
+}
