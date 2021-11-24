@@ -31,3 +31,4 @@ mta_archives/
 credentials.json
 /s4hana_pipeline
 /deployment
+.env
